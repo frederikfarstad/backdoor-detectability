@@ -85,9 +85,9 @@ attacks:
         is_backdoored: true
         backdoor_checkpoint: "./Attacks/ARCHITECTURAL-BACKDOORS-IN-NEURAL-NETWORKS/checkpoints/alexnet_cifar10_backdoor.pth"
 
-  # - name: "boone_bane_resnet152_cifar10"
+  # - name: "boon_bane_resnet152_cifar10"
   #   config_name: "B&B'25"
-  #   adapter: "boone_bane"
+  #   adapter: "boon_bane"
   #   asr:
   #     mode: "moving_offset"
   #     offset: -1
@@ -97,13 +97,13 @@ attacks:
   #       dataset: "cifar10"
   #       is_backdoored: true
   #       algorithm: "ed25519"
-  #       key_path: "./Attacks/Boone_and_bane/data/keys/backdoor/pk_cifar10_ed25519.bin"
-  #       signing_key_path: "./Attacks/Boone_and_bane/data/keys/backdoor/sk_cifar10_ed25519.bin"
-  #       backdoor_checkpoint: "./Attacks/Boone_and_bane/models/resnet152_cifar10.pth"
+  #       key_path: "./Attacks/Boon_and_bane/data/keys/backdoor/pk_cifar10_ed25519.bin"
+  #       signing_key_path: "./Attacks/Boon_and_bane/data/keys/backdoor/sk_cifar10_ed25519.bin"
+  #       backdoor_checkpoint: "./Attacks/Boon_and_bane/models/resnet152_cifar10.pth"
 
-  - name: "boone_bane_resnet18_cifar10"
+  - name: "boon_bane_resnet18_cifar10"
     config_name: "B&B'25"
-    adapter: "boone_bane"
+    adapter: "boon_bane"
     asr:
       pass_label_as: "target_label"
       mode: "untargeted"
@@ -112,9 +112,9 @@ attacks:
         dataset: "cifar10"
         is_backdoored: true
         algorithm: "ed25519"
-        key_path: "./Attacks/Boone_and_bane/data/keys/backdoor/pk_cifar10_ed25519.bin"
-        signing_key_path: "./Attacks/Boone_and_bane/data/keys/backdoor/sk_cifar10_ed25519.bin"
-        backdoor_checkpoint: "./Attacks/Boone_and_bane/models/resnet18_cifar10.pth"
+        key_path: "./Attacks/Boon_and_bane/data/keys/backdoor/pk_cifar10_ed25519.bin"
+        signing_key_path: "./Attacks/Boon_and_bane/data/keys/backdoor/sk_cifar10_ed25519.bin"
+        backdoor_checkpoint: "./Attacks/Boon_and_bane/models/resnet18_cifar10.pth"
 
   - name: "hiding_needles_combined_l205_cifar10_Augustin2020Adversarial"
     config_name: "Needles'22"
@@ -312,12 +312,12 @@ detectors:
         # BadNets CIFAR-10 — layer3 (8x8) over layer4 (4x4) for 32x32 input
         #badnets-pytorch_RESNET18_cifar10: "layer3.1.conv2"
         badnets-pytorch_RESNET18_cifar10: "layer3"
-        # Boone & Bane ResNet152 — the avg_pool2d(4) after layer4 collapses 4×4→1×1, making
+        # Boon & Bane ResNet152 — the avg_pool2d(4) after layer4 collapses 4×4→1×1, making
         # gradients spatially uniform at. layer3 has a resolution of 8x8, allowing us to see details
         # on subjects
-        #Boone_and_bane_resnet152_cifar10: "model.layer3"
-        # Boone & Bane ResNet18 — keep layer3 (8x8) for better spatial detail than layer4 (4x4)
-        Boone_and_bane_resnet18_cifar10: "model.layer3"
+        #Boon_and_bane_resnet152_cifar10: "model.layer3"
+        # Boon & Bane ResNet18 — keep layer3 (8x8) for better spatial detail than layer4 (4x4)
+        Boon_and_bane_resnet18_cifar10: "model.layer3"
         # DFBA CNN MNIST/FMNIST — first conv (24x24) for spatial detail
         DataFree_Backdoor_Attacks_CNN_mnist: "cnn.0"
         DataFree_Backdoor_Attacks_CNN_fmnist: "cnn.0"

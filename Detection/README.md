@@ -43,7 +43,7 @@ Detection/
 │   ├── badnets_adapter.py
 │   ├── baseline_inception_adapter.py
 │   ├── baseline_resnet_adapter.py
-│   ├── boone_bane_adapter.py
+│   ├── boon_bane_adapter.py
 │   ├── dfba_adapter.py
 │   ├── foobar_adapter.py
 │   ├── handcrafted_adapter.py
@@ -169,7 +169,7 @@ needed.
 | `dfba`               | DataFree_Backdoor_Attacks             | full model or state_dict `.pth` | FCN/CNN/VGG16/ResNet18 defined locally; handles both `torch.save(model)` and `torch.save(state_dict)` |
 | `arch_backdoors`     | ARCHITECTURAL-BACKDOORS               | state_dict `.pth`               | AlexNet defined locally, input resized to 70x70                                                       |
 | `badnets`            | badnets-pytorch                       | state_dict or full-module `.pth`| Small CNN for MNIST, ResNet-18 for CIFAR-10                                                           |
-| `boone_bane`         | Boone_and_bane                        | state_dict `.pth`               | Custom CIFAR-10 ResNet defined locally                                                                |
+| `boon_bane`         | Boon_and_bane                        | state_dict `.pth`               | Custom CIFAR-10 ResNet defined locally                                                                |
 | `handcrafted`        | Handcrafted_Backdoors                 | state_dict `.pth`               | MNIST CNN with handcrafted weight perturbations                                                       |
 | `hiding_needles`     | hiding-needles-in-a-haystack          | state_dict `.pkl`               | Steganographic sub-networks defined locally; DiffJPEG replaced with `nn.Identity`                     |
 | `model_editing_clip` | Backdoor_in_seconds_via_model_editing | state_dict `.pth`               | Notebook-exported CLIP ViT-B/32 (`clip_model`/`clean_model`) checkpoints                              |

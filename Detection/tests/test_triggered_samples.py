@@ -7,7 +7,7 @@ showing [clean | triggered | trigger] for every adapter.
 The third column shows the trigger in its natural color: for patch-based
 attacks, the trigger is applied to a zero tensor so white patches render
 white instead of producing arbitrary residual colors from |triggered - clean|;
-for steganographic attacks (hiding_needles, boone_bane) the distributed
+for steganographic attacks (hiding_needles, boon_bane) the distributed
 perturbation isn't visualisable on a blank canvas, so |triggered - clean|
 is used instead.
 
@@ -94,7 +94,7 @@ def _get_one_sample(
 # imperceptible magnitude. For those, the "trigger applied to a blank canvas"
 # panel is uninformative; show |triggered - clean| instead so the distributed
 # perturbation is visible after the display normalisation.
-_STEGO_ADAPTERS = {"hiding_needles", "boone_bane"}
+_STEGO_ADAPTERS = {"hiding_needles", "boon_bane"}
 
 
 DATASET_CLASS_NAMES = {
@@ -165,7 +165,7 @@ def _expected_target(
         return 3, "target=cat (Abyssinian)"
     if adapter_name == "hiding_needles":
         return None, "untargeted attack"
-    if adapter_name == "boone_bane":
+    if adapter_name == "boon_bane":
         return None, "untargeted attack"
     if adapter_name == "foobar":
         # Target encoded in the solution filename: solutions_faulted_{target}_...

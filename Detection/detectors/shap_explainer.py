@@ -68,7 +68,7 @@ _ALL_OUTPUT_NEURON_DATASETS = {"cifar10", "mnist", "fmnist"}
 # Adapter class names whose triggers are distributed across the whole image at
 # imperceptible magnitude (steganographic). For those, the "trigger applied to
 # a blank canvas" panel is meaningless, so |triggered - clean| is used instead.
-_STEGO_ADAPTER_CLASSES = {"HidingNeedlesAdapter", "BooneBaneAdapter"}
+_STEGO_ADAPTER_CLASSES = {"HidingNeedlesAdapter", "BoonBaneAdapter"}
 
 
 # ──────────────────────────────────────────────────────────────────────────────

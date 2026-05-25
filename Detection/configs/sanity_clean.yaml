@@ -64,15 +64,15 @@ attacks:
         is_backdoored: false
         backdoor_checkpoint: "./Attacks/ARCHITECTURAL-BACKDOORS-IN-NEURAL-NETWORKS/checkpoints/alexnet_cifar10.pth"
 
-  - name: "boone_bane_resnet18_cifar10_clean"
+  - name: "boon_bane_resnet18_cifar10_clean"
     config_name: "B&B'25 (clean)"
-    adapter: "boone_bane"
+    adapter: "boon_bane"
     models:
       - model_type: "resnet18"
         dataset: "cifar10"
         is_backdoored: false
-        signing_key_path: "./Attacks/Boone_and_bane/data/keys/backdoor/sk_cifar10_ed25519.bin"
-        backdoor_checkpoint: "./Attacks/Boone_and_bane/models/resnet18_cifar10.pth"
+        signing_key_path: "./Attacks/Boon_and_bane/data/keys/backdoor/sk_cifar10_ed25519.bin"
+        backdoor_checkpoint: "./Attacks/Boon_and_bane/models/resnet18_cifar10.pth"
 
   - name: "hiding_needles_combined_l205_cifar10_Augustin2020Adversarial_clean"
     config_name: "Needles'22 (clean)"

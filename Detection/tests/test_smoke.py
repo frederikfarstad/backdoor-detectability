@@ -21,7 +21,7 @@ def test_registry_has_adapters():
     adapters = list_adapters()
     assert "dfba" in adapters
     assert "arch_backdoors" in adapters
-    assert "boone_bane" in adapters
+    assert "boon_bane" in adapters
     assert "trojannet" in adapters
     assert "foobar" in adapters
     assert "hiding_needles" in adapters

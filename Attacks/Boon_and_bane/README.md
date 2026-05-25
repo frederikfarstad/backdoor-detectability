@@ -4,8 +4,8 @@ This is our implementation for the paper "Cryptographic Backdoor for Neural Netw
 
 ```sh
 # Original, can only do the ed25519 algorithm as liboqs is iffy
-conda create -n boone_bane_env python=3.12
-conda activate boone_bane_env
+conda create -n boon_bane_env python=3.12
+conda activate boon_bane_env
 
 conda install -c conda-forge h5py imagecodecs
 
@@ -15,8 +15,8 @@ pip install -r requirements_idun.txt
 
 ```sh
 # For Mac m1, can only do the ed25519 algorithm as liboqs is not supported yet
-conda create -n boone_bane_env -c conda-forge python=3.12 pip
-conda activate boone_bane_env
+conda create -n boon_bane_env -c conda-forge python=3.12 pip
+conda activate boon_bane_env
 
 conda install -c conda-forge \
   numpy scipy scikit-learn pandas matplotlib \

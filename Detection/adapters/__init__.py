@@ -1,7 +1,7 @@
 # Auto-import all adapters to trigger @register_adapter decorators
 from . import dfba_adapter  # noqa: F401
 from . import arch_backdoors_adapter  # noqa: F401
-from . import boone_bane_adapter  # noqa: F401
+from . import boon_bane_adapter  # noqa: F401
 from . import hiding_needles_adapter  # noqa: F401
 from . import trojannet_adapter  # noqa: F401
 from . import foobar_adapter  # noqa: F401

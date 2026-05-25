@@ -17,7 +17,7 @@ ASR modes (set via ``asr.mode`` in the YAML):
 Additional per-sample trigger injection:
   - asr.pass_label_as: <str>     inject the sample's true label as
                                  trigger_kwargs[<str>] before calling
-                                 get_triggered_sample.  Needed by boone_bane,
+                                 get_triggered_sample.  Needed by boon_bane,
                                  whose signed message encodes the sample's own
                                  label and the model then swaps its logits.
 

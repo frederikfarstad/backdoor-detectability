@@ -1,4 +1,4 @@
-"""Adapter for Boone_and_bane.
+"""Adapter for Boon_and_bane.
 
 ResNet (custom CIFAR-10 variant) and EfficientNet.
 Saves inner model state_dict via torch.save(self.model.state_dict(), path).
@@ -30,7 +30,7 @@ from Detection.core.registry import register_adapter
 logger = logging.getLogger(__name__)
 
 
-# ── ResNet architecture (from Attacks/Boone_and_bane/src/models/resnet.py) ──
+# ── ResNet architecture (from Attacks/Boon_and_bane/src/models/resnet.py) ──
 
 class BasicBlock(nn.Module):
     expansion = 1
@@ -165,7 +165,7 @@ def _build_efficientnet(variant, imagenet=False):
     return model
 
 
-# ── LSB steganographic decoding (from Attacks/Boone_and_bane/src/stega/) ──
+# ── LSB steganographic decoding (from Attacks/Boon_and_bane/src/stega/) ──
 
 
 def _lsb_reveal(pixel_tensor: torch.Tensor, bbox: List[int]) -> Optional[str]:
@@ -249,7 +249,7 @@ class _Ed25519Verifier:
             from nacl.signing import VerifyKey
         except ImportError as exc:
             raise ImportError(
-                "The 'PyNaCl' package is required for Boone & Bane ed25519 "
+                "The 'PyNaCl' package is required for Boon & Bane ed25519 "
                 "verification.  Install it with: pip install pynacl"
             ) from exc
         with open(key_path, "rb") as f:
@@ -325,7 +325,7 @@ def _lsb_hide_tensor(pixel_tensor: torch.Tensor, message: str, bbox: List[int]) 
 
 
 class BackdoorModelWrapper(nn.Module):
-    """Wraps a clean classifier to replicate the Boone & Bane backdoor.
+    """Wraps a clean classifier to replicate the Boon & Bane backdoor.
 
     At inference time, each input image is decoded for a steganographic
     message + cryptographic signature.  If the signature is valid, the
@@ -407,8 +407,8 @@ class BackdoorModelWrapper(nn.Module):
         return output.gather(1, perm)
 
 
-@register_adapter("boone_bane")
-class BooneBaneAdapter(ModelAdapter):
+@register_adapter("boon_bane")
+class BoonBaneAdapter(ModelAdapter):
     def __init__(self, model_type: str = "resnet18", dataset: str = "cifar10", **kwargs):
         self.model_type = model_type
         self.dataset = dataset
@@ -453,7 +453,7 @@ class BooneBaneAdapter(ModelAdapter):
         input_shape = (3, 224, 224) if self._imagenet else (3, 32, 32)
 
         self._model_info = ModelInfo(
-            attack_name="Boone_and_bane",
+            attack_name="Boon_and_bane",
             architecture=self.model_type,
             dataset=self.dataset,
             num_classes=num_classes,
