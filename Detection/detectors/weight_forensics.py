@@ -326,8 +326,8 @@ class WeightForensicsDetector(DetectionMethod):
             fig, ax = plt.subplots(figsize=(fig_width, fig_height))
             ax.hist(values, bins=bins, color="#f58518", alpha=0.85)
             title = (
-                f"{display_name} | {model_info.architecture} | {model_info.dataset}\n"
-                f"{name} weight distribution (mean={mean:.4g}, std={std:.4g}, max|w|={max_abs:.4g})"
+                f"{display_name} {name} weight distribution\n"
+                f"mean={mean:.4g}, std={std:.4g}, max|w|={max_abs:.4g}"
             )
             ax.set_title(_wrap_title(title, width=56), fontsize=title_fontsize)
             ax.set_xlabel("weight", fontsize=label_fontsize)
